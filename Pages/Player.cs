@@ -270,6 +270,12 @@ Creation Date");
 {GetPing(targetRig)}
 {GetCreationDate(targetRig.OwningNetPlayer.UserId, (str) => updateTime = 0f)}");
 
+                    GorillaPlayerScoreboardLine scoreboardLine = GorillaScoreboardTotalUpdater.allScoreboardLines.FirstOrDefault(line => line.linePlayer == targetRig.OwningNetPlayer);
+                    if (scoreboardLine != null)
+                        usage.transform.Find("Mute/Text").GetComponent<TextMeshPro>().SafeSetText(scoreboardLine.muteButton.isOn ? "Unmute" : "Mute");
+                    
+                    usage.transform.Find("Prioritize/Text").GetComponent<TextMeshPro>().SafeSetText(PrioritizeVoicePatch.prioritizedRig == targetRig ? "Unprioritize" : "Prioritize");
+
                     List<string> legalMods = new List<string>();
                     List<string> illegalMods = new List<string>();
 
