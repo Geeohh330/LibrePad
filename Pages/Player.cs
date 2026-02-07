@@ -450,6 +450,7 @@ Creation Date");
         }
 
         public static readonly Dictionary<string, ModInfo> modDictionary = new Dictionary<string, ModInfo> {
+            { "ii's Stupid Menu", new ModInfo { name = "ii's Stupid Menu", legal = false } },
             { "genesis", new ModInfo { name = "Genesis", legal = false } },
             { "HP_Left", new ModInfo { name = "Holdable Pad", legal = true } },
             { "GrateVersion", new ModInfo { name = "Grate", legal = true } },
